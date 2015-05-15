@@ -1,0 +1,32 @@
+<Canvas>
+    <Kind>40</Kind>
+    <Name>fftCTL</Name>
+    <IsMinified>0</IsMinified>
+    <XPosition>0.000000000</XPosition>
+    <YPosition>0.000000000</YPosition>
+</Canvas>
+<Widget>
+    <Kind>4</Kind>
+    <Name>audioThreshold</Name>
+    <Value>1.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>audioPeakDecay</Name>
+    <Value>0.847290635</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>audioMaxDecay</Name>
+    <Value>0.916256130</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>audioMirror</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>isSampling</Name>
+    <Value>0</Value>
+</Widget>

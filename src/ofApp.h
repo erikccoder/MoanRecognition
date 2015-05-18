@@ -1,10 +1,14 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxFFTLive.h"
 #include "ofxUI.h"
+#include "FftApp.h"
+#include "BackdropApp.h"
+#include "RecognitionApp.h"
 
-class ofApp : public ofBaseApp{
+
+class ofApp : public ofBaseApp, public FftApp, public BackdropApp, public RecognitionApp
+{
 
 	public:
 		void setup();
@@ -22,15 +26,20 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
     void guiEvent(ofxUIEventArgs& e);
+    void setGuiEventAndLoad(ofxUICanvas* _ui);
+    void toggleRecrod();
+    bool isSampling;
+    
+    ofPtr<ofImage> predictedResult;
     
     vector<double> curSpectrum;
+    vector<pair<int, double> > curSpectrumMap;
     
-    ofxFFTLive fftLive;
-    float audioThreshold;
-    float audioPeakDecay;
-    float audioMaxDecay;
-    bool audioMirror;
-    bool isSampling;
-    ofPtr<ofxUISuperCanvas> gui;
-
+    vector<double> curPulse;
+    
+    ofPtr<ofxUITabBar> tabGui;
+    
+    ofPtr<ofxUICanvas> recordUI;
+    float lastStartRecodTime;
+    float lastStopRecodTime;
 };
